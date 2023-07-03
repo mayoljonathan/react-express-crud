@@ -2,6 +2,8 @@
 
 This project is a React Express CRUD (Create, Read, Update, Delete) application from year 2020. It is a simple web application built using React.js on the front-end and Express.js on the back-end. The app allows users to perform CRUD operations on a set of data.
 
+The database is only a json file that lives within the source code if ran in local. When deployed in Vercel, this is only a temporary file in the "/tmp" directory.
+
 ## Demo
 
 A live demo of the application can be found [here](https://react-express-crud-mayoljonathan.vercel.app/).
