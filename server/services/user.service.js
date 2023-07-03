@@ -1,8 +1,13 @@
 const { v4: uuidv4 } = require("uuid");
 const { readFileSync, writeFileSync } = require("fs");
 const path = require("path");
+console.log("__dirname", __dirname);
+console.log("process.cwd", process.cwd());
 
-const dbPath = path.join(process.cwd(), "db", "data.json");
+// const dbPath = path.join(process.cwd(), "db", "data.json");
+const dbPath = path.join(__dirname, "..", "db", "data.json");
+console.log("dbPath", dbPath);
+
 let userDb;
 try {
   userDb = JSON.parse(readFileSync(dbPath, "utf-8"));
