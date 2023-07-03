@@ -1,15 +1,18 @@
-const { v4: uuidv4 } = require('uuid');
-const { readFileSync, writeFileSync } = require('fs');
+const { v4: uuidv4 } = require("uuid");
+const { readFileSync, writeFileSync } = require("fs");
+const path = require("path");
 
-const dbPath = `${process.cwd()}/db/data.json`;
+const dbPath = path.join(process.cwd(), "db", "data.json");
 let userDb;
 try {
-  userDb = JSON.parse(readFileSync(dbPath).toString());
+  userDb = JSON.parse(readFileSync(dbPath, "utf-8"));
 } catch (e) {
+  console.error(e);
   userDb = {};
 }
 
-const delay = 500;
+// Sample only to simulate
+const delay = 100;
 
 const Find = async () => {
   try {
